@@ -1,3 +1,7 @@
+body {
+  background-color: #E8DFE0;
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +29,23 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #8D9B6A
+}
+
+.button {
+  font-size: 1rem;
+  border-radius: 10px;
+  color: #8A9EA7;
+}
+
+.smurf {
+  color: #DAB692;
+}
+
+.smurf-background {
+  background-color: #8F5B34;
 }
