@@ -7,16 +7,15 @@ const Smurfs = props => {
 
     return (
         <>
-            {props.error ? (
-                <div>{props.error}</div>
-            ) : (  
-               props.smurfs.map(smurf => 
-                    <div>
-                        <h2>{smurf.name}</h2>
-                        <h3>{smurf.age}</h3>
-                        <h3>{smurf.height}</h3>
-                    </div>)
-            )}
+            <div>
+                {props.smurfs.map(smurf =>( 
+                    <div className='smurf-background' key={smurf.id}>
+                        <h2 className='smurf'>{smurf.name}</h2>
+                        <h3 className='smurf'>{smurf.age}</h3>
+                        <h3 className='smurf'>{smurf.height}</h3>
+                    </div>
+                ))}
+            </div>
         </>
     );
 };
@@ -24,7 +23,7 @@ const Smurfs = props => {
 const mapStateToProps = state => {
     return {
         smurfs: state.smurfs,
-        error: state.error
+        error: state.error,
     };
 };
 

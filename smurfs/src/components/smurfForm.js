@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { getData } from '../actions/index';
 
 const SmurfForm = props => {
+
+    // const initSmurfs = props.getData
+    // useEffect(() =>{
+    //     initSmurfs()
+    // }, [initSmurfs])
 
     const handleGetData = e => {
         e.preventDefault();
@@ -15,7 +20,7 @@ const SmurfForm = props => {
             {props.isFetchingData ? (
                 <div>Loading your smurf village!</div>
             ) : (
-                <button onClick={handleGetData}>Show village</button>
+                <button className='button' onClick={handleGetData}>Show village</button>
             )}
         </>
     );

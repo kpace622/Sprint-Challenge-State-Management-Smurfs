@@ -30,11 +30,6 @@ export const smurfReducer = (state = initialState, action) => {
         case ADD_SMURF:
             return {
                 ...state,
-                smurfs: action.payload
-            }
-        case POST_SUCCESS:
-            return {
-                ...state,
             }
         default:
             return state;
